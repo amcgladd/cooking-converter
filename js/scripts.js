@@ -27,27 +27,24 @@ $(document).ready(function() {
 
   });
 
-  $("form#subtract").submit(function(event) {
+  $("form#gallons").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#subtract1").val());
-    var number2 = parseInt($("#subtract2").val());
-    var result = subtract(number1, number2);
-    $("#outputSubtract").text(result);
+    var number1 = parseInt($("#gallons1").val());
+    var result = liters(number1);
+    $("#outputGallons").text(result + " liters");
   });
 
-  $("form#multiply").submit(function(event) {
+  $("form#ounces").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#multiply1").val());
-    var number2 = parseInt($("#multiply2").val());
-    var result = multiply(number1, number2);
-    $("#outputMultiply").text(result);
+    var number1 = parseInt($("#ounces1").val());
+    var result = grams(number1);
+    $("#outputOunces").text(result + " grams");
   });
 
-  $("form#divide").submit(function(event) {
+  $("form#temp").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#divide1").val());
-    var number2 = parseInt($("#divide2").val());
-    var result = divide(number1, number2);
-    $("#outputDivide").text(result);
+    var number1 = parseInt($("#temp1").val());
+    var result = celsius(number1);
+    $("#outputTemp").text(result + " degrees Celsius");
   });
 });
